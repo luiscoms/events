@@ -18,4 +18,8 @@ public class EventsService {
 		return repository.findAll();
 	}
 
+	public Event createEvent(Event event) {
+		return repository.insertEvent(event);
+	}
+
 }
