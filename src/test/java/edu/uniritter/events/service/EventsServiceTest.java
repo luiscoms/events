@@ -17,9 +17,6 @@ import edu.uniritter.events.domain.Event;
 @SpringBootTest
 public class EventsServiceTest {
 	
-//	@Autowired
-//	private DataSource datasource;
-	
 	@Autowired
 	private EventsService service;
 	
