@@ -3,6 +3,7 @@ buildscript {
 		springBootVersion = '1.5.7.RELEASE'
 	}
 	repositories {
+		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
@@ -19,6 +20,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -28,5 +30,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('com.h2database:h2')
+	
+	compile('org.apache.httpcomponents:httpclient')
+	compile('org.apache.httpcomponents:httpcore')
+	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('com.github.tomakehurst:wiremock:2.8.0')
 }

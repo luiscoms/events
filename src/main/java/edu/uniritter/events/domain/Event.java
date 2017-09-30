@@ -1,20 +1,20 @@
 package edu.uniritter.events.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Event {
 	private Long id;
 	private String name;
-	private Date date;
+	private LocalDate date;
 	
 	public Event() {}
 	
-	public Event(String name, Date date) {
+	public Event(String name, LocalDate date) {
 		this.name = name;
 		this.date = date;
 	}
 
-	public Event(Long id, String name, Date date) {
+	public Event(Long id, String name, LocalDate date) {
 		this(name, date);
 		this.id = id;
 	}
@@ -27,11 +27,11 @@ public class Event {
 		this.name = name;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 	

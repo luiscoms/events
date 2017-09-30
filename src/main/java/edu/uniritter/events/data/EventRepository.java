@@ -29,7 +29,7 @@ public class EventRepository {
 				return new Event(
 						rs.getLong("event_id"), 
 						rs.getString("event_name"), 
-						rs.getDate("event_date"));
+						rs.getDate("event_date").toLocalDate());
 			}
 		});
 		
@@ -54,7 +54,7 @@ public class EventRepository {
 				return new Event(
 						rs.getLong("event_id"), 
 						rs.getString("event_name"), 
-						rs.getDate("event_date"));
+						rs.getDate("event_date").toLocalDate());
 			}
 		});
 		
